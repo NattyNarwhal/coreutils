@@ -1,0 +1,28 @@
+.Dd May 5, 2014
+.Dt MKPW 1
+.Os
+.Sh NAME
+.Nm mkpw
+.Nd makes passwords
+.Sh SYNOPSIS
+.Nm
+.Fl asn
+.Fl c Ar characters
+.Sh DESCRIPTION
+The 
+.Nm
+utility generates a password using the secure
+.Xr arc4random 3 
+function.
+.Pp
+The options are as follows:
+.Bl -tag -width indent
+.It Fl a
+Include non-printable characters in the output. Not useful unless you're encoding/hashing the output.
+.It Fl c Ar characters
+How many characters to output. If not given, 8 is the default.
+.It Fl s
+Exclude spaces. Only used if -a is set.
+.It Fl n
+Don't print a newline at the end.
+.El

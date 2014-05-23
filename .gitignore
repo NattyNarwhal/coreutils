@@ -1,0 +1,10 @@
+*.o
+cat
+mkdir
+chmod
+mkpw
+rm
+rmdir
+ls
+wc
+foreach

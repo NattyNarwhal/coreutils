@@ -1,0 +1,24 @@
+.Dd April 16, 2014
+.Dt LS 1
+.Os
+.Sh NAME
+.Nm ls
+.Nd lists files
+.Sh SYNOPSIS
+.Nm
+.Fl alh
+.Ar directories
+.Sh DESCRIPTION
+The 
+.Nm
+utility lists files contained in a directory. If there are no parameters, it defaults to the working directory. If given a file, it will simply display the listing for that file.
+.Pp
+The options are as follows:
+.Bl -tag -width indent
+.It Fl l
+Shows a longer list format, that includes in the follow order: mode, hard links to the target, owner, group, size, date, and file name.
+.It Fl a
+Shows files that start with a '.', including the pseudodirectories '.' and '..'. These are by default hidden.
+.It Fl h
+Format the size of the files in a long list to be in a human-readable format.
+.El

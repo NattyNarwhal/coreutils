@@ -1,0 +1,35 @@
+.Dd April 16, 2014
+.Dt FOREACH 1
+.Os
+.Sh NAME
+.Nm foreach
+.Nd spawns a new program and feeds stdin for each file given
+.Sh SYNOPSIS
+.Nm
+.Ar program
+.Ar files
+.Sh DESCRIPTION
+The 
+.Nm
+utility spawns a program given as the first argument for each file given on the command line, which is fed to the program via stdin.
+.Pp
+Parameters of the program can be given as the whole command in quotes, for example, "cat -v".
+.Sh EXAMPLES
+Run 
+.Xr wc 1 
+for the files given:
+.Pp
+.Dl $ foreach wc resume.txt memo.txt
+.Pp
+Run wc -l for each file given:
+.Pp
+.Dl $ foreach "wc -l" resume.txt memo.txt
+.Pp
+Run wc for each file given on the commandline via shell globbing:
+.Pp
+.Dl $ foreach wc *
+.Sh SEE ALSO
+.Xr xargs 1 
+.Sh BUGS
+.Nm
+does not return the error values of the spawned programs.
